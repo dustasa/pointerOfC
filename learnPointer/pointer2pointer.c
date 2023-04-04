@@ -8,5 +8,16 @@
 #include <stdio.h>
 
 int chap2() {
+    int a = 5;
+    int* p = &a;
+    *p = 6;
+    int **q = &p;
+    int ***r = &q;
+    printf("*p is %d \n", *p);
+    printf("*q is %d \n", *q);
+    printf("**q is %d \n", **q);
+    printf("*r is %d \n", *r);
+    printf("**r is %d \n", **r);
+    printf("***r is %d \n", ***r);
     return 0;
 }
