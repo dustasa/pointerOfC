@@ -9,22 +9,15 @@
 #include <math.h>
 
 int main() {
-//    inr arrSize = arr.size();
-    int arr[]  = {4,1,3,2,5,2,4};
-    int len = 7;
-    if (len == 0)return 0;
-    int left = 0, right = len - 1;
-    int leftMax = 0, rightMax = 0, res = 0;
-    while(left < right) {
-        if (arr[left] < arr[right]) {
-            leftMax = fmax(leftMax, arr[left]);
-            res += leftMax - arr[left];
-            left ++;
-        } else {
-            rightMax = fmax(rightMax, arr[right]);
-            res += rightMax - arr[right];
-            right --;
-        }
-    }
-    return res;
+    int a = 1025;
+    int* p;
+    p = &a;
+    printf("size of integer is %d \n", sizeof(int));
+    printf("Address of p is %d, value = %d \n", p, *p);
+    
+    char* p0;
+    p0 = (char*)p;
+    printf("size of char is %d \n", sizeof(char));
+    printf("Address of p is %d, value = %d \n", p0, *p0);
+    
 }
